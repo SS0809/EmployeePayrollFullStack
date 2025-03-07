@@ -1,0 +1,43 @@
+<div class="container">
+    <h1>Payroll Creation</h1>
+    <form [formGroup]="PayrollForm" #login="ngForm" (ngSubmit)="onSubmit()">
+        
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <input type="text" class="form-control" id="gender" formControlName="gender">
+        </div>
+
+        <div class="form-group">
+            <label for="salary">Salary</label>
+            <input type="text" class="form-control" id="salary" formControlName="salary">
+        </div>
+
+        <div class="form-group">
+            <label for="startdate">startdate</label>
+            <input type="text" class="form-control" id="startdate" formControlName="startdate">
+        </div>
+
+        <div class="form-group">
+            <label for="department">Department</label>
+            <input type="text" class="form-control" id="department" formControlName="department">
+        </div>
+
+        <div class="form-group">
+            <label for="note">Note</label>
+            <input type="text" class="form-control" id="note" formControlName="note">
+        </div>
+
+        <div class="form-group">
+            <label for="profilePic">ProfilePic</label>
+            <input type="text" class="form-control" id="profilePic" formControlName="profilePic">
+        </div>
+        <button class="btn btn-primary" *ngIf="isEdit()" (click)="updatePayroll()">Save Edit</button>
+        <button type="submit" class="btn btn-primary" *ngIf="!isEdit()" [disabled]="!PayrollForm.valid">Submit</button>
+        <!-- <button type="button" (click)="setForm(false)">Cancel</button> -->
+    </form>
+</div>

@@ -11,7 +11,7 @@ export interface Payroll {
   salary: string;
   gender: string;
   startdate: string;
-  department: string;
+  departments: string[];
   note: string,
   profilePic: string,
   id: number;

@@ -9,25 +9,29 @@
   <table class="table --bs-white">
       <thead class="thread-dark">
         <tr>
+          <th>ProfilePic</th>
           <th>Fullname</th>
           <th>Gender</th>
-          <th>Department</th>
+          <th>Departments</th>
           <th>Salary</th>
           <th>Start Date</th>
           <th>Note</th>
-          <th>ProfilePic</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let person of Payrolls | keyvalue; let i = index">
+          <td>
+            <img [src]="'/' + person.value.profilePic"
+              style="width: 50px; height: auto;"
+            >
+          </td>
           <td>{{ person.value.name }}</td>
           <td>{{ person.value.gender }}</td>
-          <td>{{ person.value.department }}</td>
+          <td style="color:crimson;font-family:monospace;">{{ person.value.departments }}</td>
           <td>{{ person.value.salary }}</td>
           <td>{{ person.value.startdate }}</td>
           <td>{{ person.value.note }}</td>
-          <td>{{ person.value.profilePic }}</td>
           <td>        
             <button class="btn btn-outline-secondary btn-sm bg-light" (click)="editPayroll(person.value)" (click)="openForm()" (click)="setEdit(true)">
               edit

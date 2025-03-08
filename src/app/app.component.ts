@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ import { RouterModule } from '@angular/router';
 })
 export class AppComponent {
   title = 'PayrollBook';
+  environment = environment;
   @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',

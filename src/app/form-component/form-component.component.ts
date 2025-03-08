@@ -4,6 +4,7 @@ import { CreateService } from '../services/create.service';
 import { EditService } from '../services/edit.service';
 import { EditStateService } from '../services/edit-state.service';
 import { CommonModule } from "@angular/common";
+import { environment } from "../../environments/environment";
 
 export interface Payroll {
   name: string;
@@ -30,7 +31,7 @@ export class FormComponentComponent implements OnChanges {
   
   departments = ['HR', 'Finance', 'Engineering', 'Marketing']; 
   selectedDepartments: string[] = [];
-
+  environment = environment;
   constructor(
     private createService: CreateService,
     private editService: EditService,

@@ -39,6 +39,8 @@
           },
           "configurations": {
             "production": {
+              "outputPath": "dist",
+              "baseHref": "/EmployeePayrollFullStack/",
               "budgets": [
                 {
                   "type": "initial",

@@ -13,15 +13,15 @@ import { EditStateService } from '../app/services/edit-state.service';
 export class AppComponent {
   title = 'PayrollBook';
   environment = environment;
+  constructor(
+    private editStateService: EditStateService
+  ) {
+  }
   @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
   })
-  constructor(
-    private editStateService: EditStateService
-  ) {
-  }
   getHost2(){
     return this.editStateService.getHost();
   }

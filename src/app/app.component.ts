@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { environment } from '../environments/environment';
+import { EditStateService } from '../app/services/edit-state.service';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,14 @@ export class AppComponent {
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
   })
-    goToAbout() {
-      // Logic to navigate to the About page
-    }
+  constructor(
+    private editStateService: EditStateService
+  ) {
+  }
+  getHost2(){
+    return this.editStateService.getHost();
+  }
+  goToAbout() {
+     // Logic to navigate to the About page
+  }
 }

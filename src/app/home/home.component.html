@@ -22,7 +22,7 @@
       <tbody>
         <tr *ngFor="let person of Payrolls | keyvalue; let i = index">
           <td>
-            <img [src]="'/' + person.value.profilePic"
+            <img [src]="person.value.profilePic"
               style="width: 50px; height: auto;"
             >
           </td>

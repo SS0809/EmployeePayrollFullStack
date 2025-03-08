@@ -44,11 +44,11 @@
             <label>Profile Picture</label><br>
         
             <label for="profilePic1"></label>
-                <img src="/a1.png" width="20%" height="auto">
+                <img [src]="'a1.png'" width="20%" height="auto">
             <input type="radio" id="profilePic1" formControlName="profilePic" value="a1.png">
         
             <label for="profilePic2"></label>
-                <img src="/a2.png" width="20%" height="auto">
+                <img [src]="'a2.png'" width="20%" height="auto">
             <input type="radio" id="profilePic2" formControlName="profilePic" value="a2.png">
         </div>        
         <button class="btn btn-primary" *ngIf="isEdit()" (click)="updatePayroll()">Save Edit</button>

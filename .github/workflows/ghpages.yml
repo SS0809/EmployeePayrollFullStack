@@ -22,9 +22,8 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          rm -rf package-lock.json node_modules
-          npm cache clean --force
-          npm ci
+          rm -rf node_modules
+          npm install 
 
       - name: Build Angular App
         run: |

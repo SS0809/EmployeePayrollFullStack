@@ -47,9 +47,6 @@ export class FormComponentComponent implements OnChanges {
     profilePic: new FormControl(''),
     departments: new FormControl<string[]>([], { nonNullable: true })
   });
-  getHost2(){
-    return this.editStateService.getHost();
-  }
   ngOnChanges(changes: SimpleChanges) {
     if (changes['editPayrollData'] && this.editPayrollData) {
       this.PayrollForm.patchValue({

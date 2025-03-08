@@ -41,9 +41,6 @@ export class HomeComponent {
   openForm() {
     this.editStateService.setIsForm(true);
   }
-  getHost2(){
-    return this.editStateService.getHost();
-  }
   dateformater(date:string){
     const rawDate = date;
     let formattedDate = '';

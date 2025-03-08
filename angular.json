@@ -15,7 +15,6 @@
           "options": {
             "outputPath": "dist/employee-payroll",
             "index": "src/index.html",
-            "baseHref": "/EmployeePayrollFullStack/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"

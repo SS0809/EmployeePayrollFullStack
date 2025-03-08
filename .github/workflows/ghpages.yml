@@ -29,6 +29,7 @@ jobs:
       - name: Build Angular App
         run: |
           npm run build -- --output-path=dist --base-href=/EmployeePayrollFullStack/
+          ng build --configuration=production --base-href=$(node -e "console.log(require('./src/environments/environment.prod').baseHref)")
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

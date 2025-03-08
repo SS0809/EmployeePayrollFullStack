@@ -22,7 +22,7 @@ jobs:
           node-version: 18 
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install && npm install angular@latest
 
       - name: Build Angular App
         run: npm run build

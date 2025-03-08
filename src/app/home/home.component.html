@@ -30,7 +30,7 @@
           <td>{{ person.value.gender }}</td>
           <td style="color:crimson;font-family:monospace;">{{ person.value.departments }}</td>
           <td>{{ person.value.salary }}</td>
-          <td>{{ person.value.startdate }}</td>
+          <td>{{ dateformater(person.value.startdate) }}</td>
           <td>{{ person.value.note }}</td>
           <td>        
             <button class="btn btn-outline-secondary btn-sm bg-light" (click)="editPayroll(person.value)" (click)="openForm()" (click)="setEdit(true)">

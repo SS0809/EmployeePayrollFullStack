@@ -41,7 +41,20 @@ export class HomeComponent {
   openForm() {
     this.editStateService.setIsForm(true);
   }
-
+  dateformater(date:string){
+    const rawDate = date;
+    let formattedDate = '';
+    if (rawDate) {
+      const parts = rawDate.split('-');
+      if (parts.length === 3) {
+        const day = parseInt(parts[2], 10);
+        const month = parseInt(parts[1], 10) - 1;
+        const year = parseInt(parts[0], 10);
+        return new Date(year, month, day).toLocaleString('default', { day:'numeric' , month: 'long', year: 'numeric' });
+      }
+    }
+    return formattedDate; 
+  }
   closeForm() {
     this.editStateService.setIsForm(false);
   }

@@ -2,9 +2,9 @@ import { Component, EventEmitter, Output, Input, OnChanges, SimpleChanges } from
 import { FormGroup, FormControl, Validators, FormArray, ReactiveFormsModule } from "@angular/forms";
 import { CreateService } from '../services/create.service';
 import { EditService } from '../services/edit.service';
-import { EditStateService } from '../services/edit-state.service';
 import { CommonModule } from "@angular/common";
 import { environment } from "../../environments/environment";
+import { EditStateService } from "../services/edit-state.service";
 
 export interface Payroll {
   name: string;
@@ -47,7 +47,9 @@ export class FormComponentComponent implements OnChanges {
     profilePic: new FormControl(''),
     departments: new FormControl<string[]>([], { nonNullable: true })
   });
-
+  getHost2(){
+    return this.editStateService.getHost();
+  }
   ngOnChanges(changes: SimpleChanges) {
     if (changes['editPayrollData'] && this.editPayrollData) {
       this.PayrollForm.patchValue({

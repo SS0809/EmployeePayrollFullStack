@@ -1,4 +1,5 @@
 export const environment = {
     production: true,
-    baseHref: '/EmployeePayrollFullStack/'  
+    baseHref: '/EmployeePayrollFullStack/'  ,
+    apiUrl: 'https://payroll2-production.up.railway.app'
 }

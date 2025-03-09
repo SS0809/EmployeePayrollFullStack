@@ -11,16 +11,6 @@ export class EditStateService {
   isForm$ = this.isEditSubject.asObservable();
   private personId = new BehaviorSubject<number>(0);
   personId$ = this.isEditSubject.asObservable();
-  private host = new BehaviorSubject<string>("");
-  host$ = this.host.asObservable();
-
-
-  getHost(){
-    return this.host.value;
-  }
-  setHost(value: string){
-    this.host.next(value);
-  }
   setPersonId(value: number) { 
     this.personId.next(value);
   }

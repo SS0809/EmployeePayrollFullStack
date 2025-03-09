@@ -85,8 +85,8 @@ export class HomeComponent {
   }
 
   deletePayroll(person: Payroll) {
-    this.deleteService.deleteData(person);
     this.Payrolls.delete(person.id);
+    this.deleteService.deleteData(person);
   }
   
   editPayroll(person: Payroll) {

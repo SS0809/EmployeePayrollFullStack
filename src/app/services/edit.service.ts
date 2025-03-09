@@ -11,6 +11,7 @@ export class EditService {
   constructor(private http: HttpClient) {}
 
   editData(person: Payroll): Observable<any> {
-    return this.http.put(environment.apiUrl +'/api/employees/'+person.id, person);
+    return this.http.put(environment.apiUrl +'/api/employees/'+ person.id,
+       person);
   }
 }

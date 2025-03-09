@@ -1,5 +1,5 @@
 export const environment = {
-    production: false,
-    baseHref: '/' 
-  };
-  
+  production: true,
+  baseHref: '/EmployeePayrollFullStack/'  ,
+  apiUrl: 'http://localhost:8090'
+}

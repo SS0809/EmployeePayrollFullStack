@@ -17,15 +17,12 @@ export class DeleteService {
       .subscribe({
         next: (data) => {
           console.log('Data deleted:', data);
-          // Assuming the API response includes a success message
           if (data === 'Employee deleted successfully') {
             console.log('Success: Employee deleted successfully');
-            // Optionally, notify the user with a UI element, like a toast or alert
           }
         },
         error: (err) => {
           console.error('Error deleting data:', err);
-          // Optionally, handle error notification
         }
       });
   }  
